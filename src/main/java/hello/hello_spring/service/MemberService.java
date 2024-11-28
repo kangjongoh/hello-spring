@@ -13,7 +13,10 @@ public class MemberService {
 
     private final MemberRepository memberRepository;
 
-    @Service
+    public MemberService() {
+        this(null);
+    }
+
     public MemberService(MemoryMemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
